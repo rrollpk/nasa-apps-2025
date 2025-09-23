@@ -5,7 +5,7 @@ from streamlit_folium import st_folium
 # Crear mapa centrado en coordenadas
 m = folium.Map(location=[48.8566, 2.3522], zoom_start=5)
 
-folium.GeoJson("geoBoundaries-ESP-ADM3_simplified.geojson", name = 'India').add_to(m)
+folium.GeoJson("pages/geoBoundaries-ESP-ADM3_simplified.geojson", name = 'India').add_to(m)
 
     
 # Añadir marcador para ciudad
