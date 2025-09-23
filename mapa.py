@@ -5,17 +5,9 @@ from streamlit_folium import st_folium
 # Crear mapa centrado en coordenadas
 m = folium.Map(location=[48.8566, 2.3522], zoom_start=5)
 
-folium.GeoJson(
-    geojson_data,
-    name="Ciudades",
-    style_function=lambda feature: {
-        "fillColor": "green",
-        "color": "black",
-        "weight": 1,
-        "fillOpacity": 0.4,
-    },
-    tooltip=folium.GeoJsonTooltip(fields=["city_name", "population"])
-).add_to(m)
+folium.GeoJson("cities.geojson", name = 'India').add_to(mapObj)
+
+    
 # Añadir marcador para ciudad
 folium.CircleMarker(
     location=[48.8566, 2.3522],
@@ -28,6 +20,7 @@ folium.CircleMarker(
 
 # Mostrar en Streamlit
 st_folium(m, width=700, height=500)
+
 
 
 
