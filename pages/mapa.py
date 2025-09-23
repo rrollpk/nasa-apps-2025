@@ -5,7 +5,7 @@ from streamlit_folium import st_folium
 # Crear mapa centrado en coordenadas
 m = folium.Map(location=[40.4378373,37424], zoom_start=5)
 
-folium.GeoJson("pages/geoBoundaries-ESP-ADM3_simplified.geojson", name = 'India').add_to(m)
+
 
 
     
