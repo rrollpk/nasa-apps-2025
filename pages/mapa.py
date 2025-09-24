@@ -5,6 +5,10 @@ from streamlit_folium import st_folium
 # Crear mapa centrado en coordenadas
 m = folium.Map(location=[40.4378373,-3.844348], zoom_start=5)
 
+bounds = [[27.6, -18.2], [43.8, 4.3]]
+m.fit_bounds(bounds)  # Ajusta vista inicial
+m.options['maxBounds'] = bounds  # No deja salir de ahí
+
 bordersStyle={
     'color': 'green',
     'weight': 2,
