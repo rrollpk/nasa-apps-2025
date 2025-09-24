@@ -6,7 +6,7 @@ from streamlit_folium import st_folium
 m = folium.Map(location=[40.4378373,-3.844348], zoom_start=5)
 
 
-folium.GeoJson("geoBoundaries-ESP-ADM3_simplified.geojson", name = 'Spain').add_to(m)
+folium.GeoJson("geoBoundaries-ESP-ADM2_simplified.geojson", name = 'Spain').add_to(m)
 
     
 # Añadir marcador para ciudad
