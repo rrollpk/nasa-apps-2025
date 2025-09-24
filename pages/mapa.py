@@ -8,7 +8,7 @@ m = folium.Map(location=[40.4378373,-3.844348], zoom_start=5)
 
 folium.GeoJson("spain_Municipality_level_3.geojson", name = 'Spain').add_to(m)
 
-borderstyle = {
+borderStyle = {
     'color': 'green',
     'weight': 2,
     'fillColor': 'blue',
