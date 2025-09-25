@@ -50,3 +50,5 @@ HeatMap(
 
 # 4. Control de capas (para activar/desactivar)
 folium.LayerControl().add_to(m)
+
+m.save("map.html")
