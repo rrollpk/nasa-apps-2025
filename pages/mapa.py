@@ -31,9 +31,6 @@ folium.CircleMarker(
     fill_color='green'
 ).add_to(m)
 
-# Mostrar en Streamlit
-st_folium(m, width=700, height=500)
-
 heat_data = [
     [40.4168, -3.7038, 0.8],  # Madrid
     [41.3879, 2.1699, 0.7],   # Barcelona
@@ -45,5 +42,12 @@ HeatMap(heat_data).add_to(m)
 
 # 4. Control de capas (para activar/desactivar)
 folium.LayerControl().add_to(m)
+
+# Mostrar en Streamlit
+st_folium(m, width=700, height=500)
+
+
+
+
 
 m.save("map.html")
