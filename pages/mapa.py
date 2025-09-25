@@ -23,9 +23,9 @@ folium.GeoJson("spain_Municipality_level_3.geojson",
 
 # Añadir marcador para ciudad
 folium.CircleMarker(
-    location=[48.8566, 2.3522],
-    radius=10,
-    popup="París: Índice ambiental 0.78",
+    location=[40.4378373,-3.844348],
+    radius=55,
+    popup="Madrid: Índice ambiental 0.78",
     color='green',
     fill=True,
     fill_color='green'
