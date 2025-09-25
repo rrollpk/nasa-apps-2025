@@ -7,8 +7,8 @@ from folium.plugins import HeatMap
 m = folium.Map(location=[40.4378373, -3.844348], zoom_start=5)
 
 bounds = [[27.6, -18.2], [43.8, 4.3]]
-m.fit_bounds(bounds)  # Ajusta vista inicial
-m.options['maxBounds'] = bounds  # No deja salir de ahí
+m.fit_bounds(bounds)  
+m.options['maxBounds'] = bounds  
 
 bordersStyle = {
     'color': 'green',
@@ -59,7 +59,7 @@ with tab1:
     st_folium(m, width=700, height=500)
 
 with tab2:
-    st.write("Aquí pondrás otra cosa (tabla, gráfico, etc.)")
+    st.write("Tab2")
 
 
 
