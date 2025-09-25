@@ -49,7 +49,7 @@ HeatMap(
 ).add_to(m)
 
 # Tabs
-tab1, tab2 = st.tabs(['🗺️ Mapa', '📊 Otra cosa'])
+tab1, tab2, tab3 = st.tabs(['🗺️ Mapa', 'Tracking Histórico', 'Chatbot'])
 
 with tab1:
     # Control de capas
@@ -61,6 +61,7 @@ with tab1:
 with tab2:
     st.write("Tab2")
 
-
+with tab3:
+    st.write("Tab3")
 
 m.save("map.html")
