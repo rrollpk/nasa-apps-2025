@@ -2,6 +2,9 @@ import folium
 from streamlit_folium import st_folium
 from folium.plugins import HeatMap
 
+tab1,tab2=st.tabs(['a','b'])
+with tab1:
+    
     
 # Crear mapa centrado en coordenadas
 m = folium.Map(location=[40.4378373,-3.844348], zoom_start=5)
