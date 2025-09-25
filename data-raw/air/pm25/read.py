@@ -1,0 +1,8 @@
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('72a465a6-4af1-4b0c-ade5-ddfa23cc19fe.xml')
+root = tree.getroot()
+
+# Acceder a los elementos del XML
+for child in root:
+    print(child.tag, child.attrib)
