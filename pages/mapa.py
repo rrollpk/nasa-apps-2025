@@ -2,8 +2,6 @@ import folium
 from streamlit_folium import st_folium
 from folium.plugins import HeatMap
 
-tab1,tab2=st.tabs(['a','b'])
-with tab1:
     
     
 # Crear mapa centrado en coordenadas
@@ -49,6 +47,9 @@ HeatMap(
     min_opacity=0.3,  # hace que sea medio translúcido
 ).add_to(m)
 
+tab1,tab2=st.tabs(['a','b'])
+with tab1:
+    
 # 4. Control de capas (para activar/desactivar)
 folium.LayerControl().add_to(m)
 
