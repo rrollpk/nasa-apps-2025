@@ -39,7 +39,12 @@ heat_data = [
     [39.4699, -0.3763, 0.9],  # Valencia
 ]
 
-HeatMap(heat_data).add_to(m)
+HeatMap(
+    heat_data,
+    radius=25,
+    blur=15,
+    min_opacity=0.3,  # hace que sea medio translúcido
+).add_to(m)
 
 # 4. Control de capas (para activar/desactivar)
 folium.LayerControl().add_to(m)
