@@ -1,5 +1,8 @@
 from typing import Union
-import fastapi import FastApi
+from fastapi import FastAPI
+
+
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -11,15 +14,18 @@ app.add_middleware(
 
 
 
-app = FastAPI()
 
 
-@app.get(/)
+
+@app.get('/')
 def root():
     return{'API de Indicadores Ambientales'}
 
-@app.get(/munipios)
+@app.get('/municipios')
 def root():
     return{'API de Indicadores Ambientales'}
+
+
+
 
 
