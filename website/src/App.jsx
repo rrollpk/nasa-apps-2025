@@ -26,6 +26,33 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="container mx-auto p-4 max-w-4xl">
+        {/* Botón de Sistema de Alertas encima */}
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={async () => {
+              const email = prompt('Insert your email to receive alerts');
+              if (!email) return;
+              try {
+                const res = await fetch('http://localhost:8000/subscribe', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email })
+                });
+                if (!res.ok) {
+                  const err = await res.json().catch(() => ({}));
+                  alert('Failed to subscribe: ' + (err.detail || res.statusText));
+                } else {
+                  alert('Subscribed successfully — check your email for confirmation');
+                }
+              } catch (e) {
+                alert('Could not reach alert server: ' + e.message);
+              }
+            }}
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md"
+          >
+            Sistema de Alertas
+          </button>
+        </div>
         <h1 className="text-3xl font-extrabold mb-6 text-blue-900 drop-shadow">NASA Space Apps Dashboard</h1>
 
       {/* Filtros arriba (opcional) */}
